@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クリップレイク</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>クリップレイク</h1>
+        <p>みんなのクリップ共有サイト</p>
+    </header>
+
+    <main>
+        <section id="upload-section">
+            <h2>動画を追加</h2>
+            <form id="video-form">
+                <label for="video-title">動画タイトル:</label>
+                <input type="text" id="video-title" placeholder="動画タイトル" required>
+                
+                <label for="video-id">YouTube動画ID(例: dQw4w9WgXcQ URLのv=の後ろ):</label>
+                <input type="text" id="video-id" placeholder="YouTube動画ID" required>
+                
+                <button type="submit">追加</button>
+            </form>
+        </section>
+
+        <section id="video-gallery">
+            <h2>動画ギャラリー</h2>
+            <div id="video-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 クリップレイク</p>
+    </footer>
+
+    <div id="modal" class="hidden">
+        <div class="modal-content">
+            <span id="close-modal">&times;</span>
+            <iframe id="player" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
